@@ -1,0 +1,10 @@
+{
+  "name": "Servidor de APIs en Node.js",
+  "description": "Una estructura para crear APIs en Node.js",
+  "author": "ebaste <ebaste@molinodeideas.es>",
+  "dependencies": {
+    "express": "~3.17.6",
+    "mysql": "~2.5.1"
+     },
+  "engine": "node 0.4.1"
+}
