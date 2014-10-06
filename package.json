@@ -6,7 +6,7 @@
   	"type" : "git",
   	"url" : "https://github.com/ebaste/NodeJSAPIServer"
   	},
-  "version": "0.1",	
+  "version": "0.0.1",	
   "dependencies": {
     "express": "~3.17.6",
     "mysql": "~2.5.1"
