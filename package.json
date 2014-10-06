@@ -1,7 +1,11 @@
 {
-  "name": "Servidor de APIs en Node.js",
+  "name": "Servidor_de_APIs_en_Node.js",
   "description": "Una estructura para crear APIs en Node.js",
   "author": "ebaste <ebaste@molinodeideas.es>",
+  "repository": {
+  	"type" : "git",
+  	"url" : "https://github.com/ebaste/NodeJSAPIServer"
+  	},
   "dependencies": {
     "express": "~3.17.6",
     "mysql": "~2.5.1"
