@@ -35,7 +35,7 @@ connection1.query('SELECT * FROM diccionario.acepcion where id_acepcion = ?;',
 });
 
 app.get('/hola.txt', function(req, res){
-  res.send('Hola Mundo');
+  res.send('Hola Mundo Cruel');
 });
 
 
