@@ -34,9 +34,11 @@ connection1.query('SELECT * FROM diccionario.acepcion where id_acepcion = ?;',
 });
 });
 
-app.get('/diccionario_prueba/:id', function(req, res, next){
-connection1.query('SELECT * FROM diccionario.acepcion where id_acepcion = ?;', 
-                   [req.params.id], function(err, rows, fields) {
+app.param('palabra', /^\w+$/);
+
+app.get('/diccionario_prueba/:palabra', function(req, res, next){
+connection1.query('SELECT articulo_voz, acep_defi FROM diccionario.articulo art, diccionario.acepcion ace, diccionario.etimologia eti where art.articulo_Voz like ? and art.ID_articulo = eti.articulo  and eti.ID_etimologia = ace.etimologia order by articulo_voz ;', 
+                   [req.params.palabra], function(err, rows, fields) {
   if (err) throw err;
 
   res.send(JSON.stringify(rows[0]));
