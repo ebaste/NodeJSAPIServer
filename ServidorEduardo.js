@@ -34,8 +34,18 @@ connection1.query('SELECT * FROM diccionario.acepcion where id_acepcion = ?;',
 });
 });
 
+app.get('/diccionario_prueba/:id', function(req, res, next){
+connection1.query('SELECT * FROM diccionario.acepcion where id_acepcion = ?;', 
+                   [req.params.id], function(err, rows, fields) {
+  if (err) throw err;
+
+  res.send(JSON.stringify(rows[0]));
+  next();
+});
+});
+
 app.get('/hola.txt', function(req, res){
-  res.send('Hola Mundo Cruel dos');
+  res.send('Hola Mundo Cruel');
 });
 
 
